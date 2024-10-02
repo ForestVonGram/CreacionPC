@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" style="-fx-background-color: #03fce3;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="37.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Arma tu PC">
+         <font>
+            <Font name="Magneto Bold" size="25.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="ram_selector" layoutX="42.0" layoutY="219.0" prefWidth="150.0" />
+      <ComboBox fx:id="cpu_selector" layoutX="254.0" layoutY="219.0" prefWidth="150.0" />
+      <ComboBox fx:id="grafica_selector" layoutX="475.0" layoutY="219.0" prefWidth="150.0" />
+      <ComboBox fx:id="almacenamiento_selector" layoutX="712.0" layoutY="219.0" prefWidth="150.0" />
+      <Text layoutX="97.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RAM">
+         <font>
+            <Font name="Magneto Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="311.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPU">
+         <font>
+            <Font name="Magneto Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="503.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GRÁFICA">
+         <font>
+            <Font name="Magneto Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="688.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ALMACENAMIENTO">
+         <font>
+            <Font name="Magneto Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="58.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total:">
+         <font>
+            <Font name="Magneto Bold" size="25.0" />
+         </font>
+      </Text>
+      <Text fx:id="total" layoutX="169.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mostrarTotal">
+         <font>
+            <Font name="Magneto Bold" size="25.0" />
+         </font>
+      </Text>
+      <Text layoutX="561.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IVA:">
+         <font>
+            <Font name="Magneto Bold" size="25.0" />
+         </font>
+      </Text>
+      <Text fx:id="iva_total" layoutX="676.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mostrarTotal">
+         <font>
+            <Font name="Magneto Bold" size="25.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="122.0" fitWidth="139.0" layoutX="757.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imagenes/logo-la-pecetera.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
