@@ -7,6 +7,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.text.Text;
 import javafx.scene.control.Button;
 import org.uniquindio.ejercicioarchivos.modelo.Componente;
@@ -39,16 +40,13 @@ public class PedidoController {
     @FXML
     private Text total;
 
+    @FXML
+    private Label lista_pedidos;
+
     private Pedido pedido;
 
     @FXML
     void initialize() {
-
-        try {
-            GestorArchivoPedido.inicializarUltimoCodigo("pedidos.txt");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
         assert almacenamiento_selector != null : "fx:id=\"almacenamiento_selector\" was not injected: check your FXML file 'PedidoView.fxml'.";
         assert cpu_selector != null : "fx:id=\"cpu_selector\" was not injected: check your FXML file 'PedidoView.fxml'.";
@@ -57,7 +55,14 @@ public class PedidoController {
         assert ram_selector != null : "fx:id=\"ram_selector\" was not injected: check your FXML file 'PedidoView.fxml'.";
         assert total != null : "fx:id=\"total\" was not injected: check your FXML file 'PedidoView.fxml'.";
 
-        pedido = new Pedido("P001", LocalDate.now());
+        try {
+            GestorArchivoPedido.inicializarUltimoCodigo("pedidos.txt");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        pedido = new Pedido(String.format("P%03d", GestorArchivoPedido.getUltimoCodigo()), LocalDate.now());
+
         ram_selector.getItems().addAll(
                 new Componente("RAM001", "8gb RAM", 90000),
                 new Componente("RAM002", "16gb RAM", 170000),
@@ -104,7 +109,9 @@ public class PedidoController {
 
     public void guardarPedido() {
         try {
+            pedido.setCodigo(String.format("P%03d", GestorArchivoPedido.getUltimoCodigo() + 1));
             GestorArchivoPedido.guardarPedidoEnArchivo(pedido, "pedidos.txt");
+            lista_pedidos.setText(pedido.getCodigo() + ", " + pedido.getFechaPedido() + ", " + pedido.getTotal() + ", " + pedido.getIva());
         } catch (IOException e) {
             e.printStackTrace();
         }

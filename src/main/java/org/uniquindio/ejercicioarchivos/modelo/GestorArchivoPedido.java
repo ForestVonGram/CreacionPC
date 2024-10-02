@@ -12,7 +12,7 @@ public class GestorArchivoPedido {
     private static int ultimoCodigo = 0;
     public static void guardarPedidoEnArchivo(Pedido pedido, String nombreArchivo) throws IOException {
         ultimoCodigo++;
-        String codigoPedido = String.format("P%03d", ultimoCodigo);
+        pedido.setCodigo(String.format("P%03d", ultimoCodigo));
 
         try (FileWriter writer = new FileWriter(nombreArchivo, true)) {
             writer.write(pedido.getCodigo() + "," + pedido.getFechaPedido() + "," + pedido.getTotal() + "," + pedido.getIva() + "\n");
@@ -69,5 +69,9 @@ public class GestorArchivoPedido {
                 }
             }
         }
+    }
+
+    public static int getUltimoCodigo() {
+        return ultimoCodigo;
     }
 }
