@@ -5,4 +5,6 @@ module org.uniquindio.ejercicioarchivos {
 
     opens org.uniquindio.ejercicioarchivos to javafx.fxml;
     exports org.uniquindio.ejercicioarchivos;
+
+    opens org.uniquindio.ejercicioarchivos.controlador to javafx.fxml;
 }
