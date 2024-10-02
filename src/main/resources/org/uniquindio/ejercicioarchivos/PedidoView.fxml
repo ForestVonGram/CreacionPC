@@ -16,10 +16,10 @@
             <Font name="Tw Cen MT" size="25.0" />
          </font>
       </Text>
-      <ComboBox fx:id="ram_selector" layoutX="42.0" layoutY="219.0" prefWidth="150.0" />
-      <ComboBox fx:id="cpu_selector" layoutX="254.0" layoutY="219.0" prefWidth="150.0" />
-      <ComboBox fx:id="grafica_selector" layoutX="475.0" layoutY="219.0" prefWidth="150.0" />
-      <ComboBox fx:id="almacenamiento_selector" layoutX="712.0" layoutY="219.0" prefWidth="150.0" />
+      <ComboBox fx:id="ram_selector" prefWidth="150.0" AnchorPane.leftAnchor="42.0" AnchorPane.topAnchor="219.0" />
+      <ComboBox fx:id="cpu_selector" prefWidth="150.0" AnchorPane.leftAnchor="254.0" AnchorPane.topAnchor="219.0" />
+      <ComboBox fx:id="grafica_selector" prefWidth="150.0" AnchorPane.leftAnchor="475.0" AnchorPane.topAnchor="219.0" />
+      <ComboBox fx:id="almacenamiento_selector" prefWidth="150.0" AnchorPane.leftAnchor="712.0" AnchorPane.topAnchor="219.0" />
       <Text fill="WHITE" layoutX="97.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RAM">
          <font>
             <Font name="Tw Cen MT" size="25.0" />
@@ -65,8 +65,8 @@
             <Image url="@imagenes/logo-la-pecetera.png" />
          </image>
       </ImageView>
-      <Button fx:id="btn_crear_pedido" layoutX="408.0" layoutY="466.0" mnemonicParsing="false" onAction="#guardarPedido" text="Crear Pedido" />
-      <Label fx:id="lista_pedidos" layoutX="53.0" layoutY="551.0" prefHeight="94.0" prefWidth="793.0" style="-fx-background-color: #006d7d;" text="Pedidos recientes" textFill="WHITE">
+      <Button fx:id="btn_crear_pedido" AnchorPane.leftAnchor="408.0" AnchorPane.topAnchor="466.0" mnemonicParsing="false" onAction="#guardarPedido" text="Crear Pedido" />
+      <Label fx:id="lista_pedidos" AnchorPane.leftAnchor="53.0" AnchorPane.topAnchor="551.0" prefHeight="94.0" prefWidth="793.0" style="-fx-background-color: #006d7d;" text="Pedidos recientes" textFill="WHITE">
          <font>
             <Font name="Tw Cen MT Bold" size="15.0" />
          </font>
