@@ -109,9 +109,20 @@ public class PedidoController {
 
     public void guardarPedido() {
         try {
-            pedido.setCodigo(String.format("P%03d", GestorArchivoPedido.getUltimoCodigo() + 1));
             GestorArchivoPedido.guardarPedidoEnArchivo(pedido, "pedidos.txt");
-            lista_pedidos.setText(pedido.getCodigo() + ", " + pedido.getFechaPedido() + ", " + pedido.getTotal() + ", " + pedido.getIva());
+            lista_pedidos.setText(pedido.getCodigo() + ", " + pedido.getFechaPedido() + ", " + pedido.getTotal() + ", " + pedido.getIva() + "\n");
+
+            String nuevoCodigo = String.format("P%03d", GestorArchivoPedido.getUltimoCodigo() + 1);
+            pedido = new Pedido(nuevoCodigo, LocalDate.now());
+
+            total.setText("0.00");
+            iva_total.setText("0.00");
+
+            ram_selector.getSelectionModel().clearSelection();
+            cpu_selector.getSelectionModel().clearSelection();
+            grafica_selector.getSelectionModel().clearSelection();
+            almacenamiento_selector.getSelectionModel().clearSelection();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
