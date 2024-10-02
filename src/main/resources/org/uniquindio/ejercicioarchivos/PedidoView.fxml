@@ -45,7 +45,7 @@
             <Font name="Tw Cen MT" size="25.0" />
          </font>
       </Text>
-      <Text fx:id="total" fill="WHITE" layoutX="169.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mostrarTotal">
+      <Text fx:id="total" fill="WHITE" layoutX="169.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.00">
          <font>
             <Font name="Tw Cen MT" size="25.0" />
          </font>
@@ -55,7 +55,7 @@
             <Font name="Tw Cen MT" size="25.0" />
          </font>
       </Text>
-      <Text fx:id="iva_total" fill="WHITE" layoutX="676.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mostrarTotal">
+      <Text fx:id="iva_total" fill="WHITE" layoutX="676.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.00">
          <font>
             <Font name="Tw Cen MT" size="25.0" />
          </font>
@@ -66,7 +66,7 @@
          </image>
       </ImageView>
       <Button fx:id="btn_crear_pedido" layoutX="408.0" layoutY="466.0" mnemonicParsing="false" onAction="#guardarPedido" text="Crear Pedido" />
-      <Label fx:id="lista_pedidos" layoutX="53.0" layoutY="551.0" prefHeight="94.0" prefWidth="793.0" style="-fx-background-color: #006d7d;" text="Pedidos recientes">
+      <Label fx:id="lista_pedidos" layoutX="53.0" layoutY="551.0" prefHeight="94.0" prefWidth="793.0" style="-fx-background-color: #006d7d;" text="Pedidos recientes" textFill="WHITE">
          <font>
             <Font name="Tw Cen MT Bold" size="15.0" />
          </font>
